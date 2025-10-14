@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Formulario de Jugador</title></head>
+<body>
+<h2>Formulario de Jugador</h2>
+
+<form action="index.php" method="POST" enctype="multipart/form-data">
+  Nombre: <input type="text" name="nombre" required><br>
+  Alias: <input type="text" name="alias" required><br>
+  Edad: <input type="number" name="edad" min="1" max="120" required><br>
+
+  Armas: <br>
+  <input type="checkbox" name="armas[]" value="Maza">Maza
+  <input type="checkbox" name="armas[]" value="Antorcha">Antorcha
+  <input type="checkbox" name="armas[]" value="Martillo">Martillo<br>
+
+  ¿Practica artes mágicas?<br>
+  <input type="radio" name="magia" value="Sí" checked>Sí
+  <input type="radio" name="magia" value="No">No<br><br>
+
+  Imagen (PNG máx 10KB): <input type="file" name="imagen" accept="image/png"><br><br>
+  <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
