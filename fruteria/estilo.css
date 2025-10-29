@@ -1,0 +1,162 @@
+
+/* -------------------- ESTILOS GENERALES -------------------- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Fondo muy claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Para que ocupe toda la altura */
+}
+
+h1 {
+   /* Nueva fuente más estilizada y amigable */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.8em; /* Aumentamos el tamaño */
+    font-weight: 700; /* Hacemos el texto más grueso */
+    
+    color: #2e558b; /* Usamos un verde oscuro y rico */
+    text-align: center;
+    padding: 25px 0; /* Aumentamos el padding para más aire */
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    
+    /* Efecto sutil de sombra en el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); 
+    
+    /* Sombra de la caja más notoria y estilizada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* -------------------- ESTILOS DE FORMULARIO/INTERACCIÓN -------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: #FF9800; /* Naranja para botones de acción */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #FB8C00;
+}
+
+/* Estilo específico para el botón "Terminar" o "Anular" */
+input[name="accion"][value=" Terminar "], input[name="accion"][value=" Anular "] {
+    background-color: #E53935; /* Rojo para terminar/anular */
+}
+
+input[name="accion"][value=" Terminar "]:hover, input[name="accion"][value=" Anular "]:hover {
+    background-color: #C62828;
+}
+
+/* -------------------- ESTILOS DE MENSAJES/TEXTO -------------------- */
+.mensaje-principal {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #388E3C; /* Verde oscuro para mensajes importantes */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.compra-detalle {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* -------------------- ESTILOS TABLA DE COMPRA -------------------- */
+
+.compra-detalle table {
+    width: 100%;
+    border-collapse: collapse; /* Une los bordes de las celdas */
+    margin: 10px 0 0 0;      /* Elimina márgenes extraños */
+    font-size: 0.95em;
+}
+
+.compra-detalle th,
+.compra-detalle td {
+    padding: 12px 15px;
+    border: none; /* Eliminamos el borde negro general */
+    border-bottom: 1px solid #eee; /* Borde inferior sutil para separar filas */
+    text-align: left;
+}
+
+/* Cabecera de la tabla */
+.compra-detalle th {
+    background-color: #4CAF50; /* Verde principal del sitio */
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #388E3C; /* Borde inferior más oscuro para la cabecera */
+}
+
+/* Alineación de las columnas 2 y 3 (Cantidad y Subtotal) a la derecha */
+.compra-detalle th:nth-child(2),
+.compra-detalle td:nth-child(2) {
+    text-align: center;
+}
+
+.compra-detalle th:nth-child(3),
+.compra-detalle td:nth-child(3) {
+    text-align: right;
+}
+
+/* Fila del Total */
+.compra-detalle tr:last-child td {
+    border-top: 2px solid #333; /* Línea superior gruesa para separar el total */
+    border-bottom: none; /* Sin borde inferior en la última fila */
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #f9f9f9; /* Un fondo muy ligero para destacar la fila */
+}
+
+/* Celda "Importe total :" */
+.compra-detalle tr:last-child td[colspan="2"] {
+    text-align: right;
+    color: #333;
+    padding-right: 10px;
+}
+
+/* Celda del valor total final */
+.compra-detalle tr:last-child td:last-child {
+    text-align: right;
+    color: #388E3C; /* Verde oscuro para el precio final */
+}
